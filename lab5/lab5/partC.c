@@ -18,7 +18,8 @@ int main(int argc, const char * argv[]) {
     
     char *txt = allocate(40);
     memset(txt,0,40);
-
+    char *first = allocate(20);
+    char *last = allocate(20);
     printf("\n");
     while(fscanf(fptr, "%[^\n]%*c", txt)) {
         if (!txt[0]) {
@@ -26,8 +27,6 @@ int main(int argc, const char * argv[]) {
         }
         int i=0;
         int first_len = 0;
-        char *first = allocate(20);
-        char *last = allocate(20);
         memset(first,0,20);
         memset(last,0,20);
 
@@ -56,14 +55,19 @@ int main(int argc, const char * argv[]) {
         printName(names->first_name, names->last_name, names->jedi_name);
         memset(txt,0,40);
         
-        deallocate(first, 20);
-        deallocate(last, 20);
         deallocate(jedi, 6);
-        first = NULL;
-        last = NULL;
+        deallocate(names, sizeof(Names));
+        
         jedi = NULL;
+        names = NULL;
     
     }
+    deallocate(first, 20);
+    deallocate(last, 20);
+
+    first = NULL;
+    last = NULL;
+    
     fclose(fptr);
     deallocate(txt, 40);
     txt = NULL;
