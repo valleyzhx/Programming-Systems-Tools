@@ -24,6 +24,9 @@ typedef struct {
 
 Node *createNode(int num);
 List *createList();
+Node * front(List * list);
+Node * insert(List * list, int index, int value);
+int removeAtIndex(List * list, int index);
 
 
 #endif /* List_h */
