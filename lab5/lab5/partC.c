@@ -16,34 +16,13 @@ int main(int argc, const char * argv[]) {
     FILE *fptr = fopen("myfile.txt", "a+");
     fseek(fptr,0,SEEK_SET);
     
-    char *txt = allocate(40);
-    memset(txt,0,40);
     char *first = allocate(20);
     char *last = allocate(20);
+    memset(first,0,20);
+    memset(last,0,20);
     printf("\n");
-    while(fscanf(fptr, "%[^\n]%*c", txt)) {
-        if (!txt[0]) {
-            break;
-        }
-        int i=0;
-        int first_len = 0;
-        memset(first,0,20);
-        memset(last,0,20);
-
-        int isFirst = 1;
+    while(fscanf(fptr, "%s %s", first,last)>=0) {
         
-        while (txt[i]!='\0') {
-            if (txt[i]==' ') {
-                isFirst = 0;
-            }
-            if (isFirst) {
-                first[i] = txt[i];
-                first_len++;
-            }else{
-                last[i-first_len-1] = txt[i];
-            }
-            i++;
-        }
 
         char *jedi = allocate(6);
         Names *names = allocate(sizeof(Names));
@@ -53,14 +32,14 @@ int main(int argc, const char * argv[]) {
         setJediName(*names);
         
         printName(names->first_name, names->last_name, names->jedi_name);
-        memset(txt,0,40);
         
         deallocate(jedi, 6);
         deallocate(names, sizeof(Names));
         
         jedi = NULL;
         names = NULL;
-    
+        memset(first,0,20);
+        memset(last,0,20);
     }
     deallocate(first, 20);
     deallocate(last, 20);
@@ -69,8 +48,6 @@ int main(int argc, const char * argv[]) {
     last = NULL;
     
     fclose(fptr);
-    deallocate(txt, 40);
-    txt = NULL;
     
     return 0;
 }
