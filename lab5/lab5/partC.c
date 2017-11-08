@@ -28,7 +28,8 @@ int main(int argc, const char * argv[]) {
         int first_len = 0;
         char *first = allocate(20);
         char *last = allocate(20);
-        memset(first,0,40);
+        memset(first,0,20);
+        memset(last,0,20);
 
         int isFirst = 1;
         
@@ -46,13 +47,13 @@ int main(int argc, const char * argv[]) {
         }
 
         char *jedi = allocate(6);
-        Names names;
-        names.first_name = first;
-        names.last_name = last;
-        names.jedi_name = jedi;
-        setJediName(names);
+        Names *names = allocate(sizeof(Names));
+        names->first_name = first;
+        names->last_name = last;
+        names->jedi_name = jedi;
+        setJediName(*names);
         
-        printName(names.first_name, names.last_name, names.jedi_name);
+        printName(names->first_name, names->last_name, names->jedi_name);
         memset(txt,0,40);
         
         deallocate(first, 20);
