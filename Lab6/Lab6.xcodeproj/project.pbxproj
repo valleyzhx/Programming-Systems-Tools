@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0E8F21A1FB6332A00D9E147 /* Stack.c in Sources */ = {isa = PBXBuildFile; fileRef = F0E8F2191FB6332A00D9E147 /* Stack.c */; };
+		F0E8F21D1FB6493D00D9E147 /* List.c in Sources */ = {isa = PBXBuildFile; fileRef = F0EC5BB31FB35CC5002D411A /* List.c */; };
+		F0E8F21F1FB649DA00D9E147 /* part3.c in Sources */ = {isa = PBXBuildFile; fileRef = F0E8F2161FB6327C00D9E147 /* part3.c */; };
 		F0EC5BAF1FB35115002D411A /* Train.c in Sources */ = {isa = PBXBuildFile; fileRef = F0EC5BAD1FB35115002D411A /* Train.c */; };
-		F0EC5BB21FB35C9E002D411A /* part2.c in Sources */ = {isa = PBXBuildFile; fileRef = F0EC5BB11FB35C9E002D411A /* part2.c */; };
-		F0EC5BB51FB35CC5002D411A /* List.c in Sources */ = {isa = PBXBuildFile; fileRef = F0EC5BB31FB35CC5002D411A /* List.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F0E8F2161FB6327C00D9E147 /* part3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = part3.c; sourceTree = "<group>"; };
+		F0E8F2181FB6332A00D9E147 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		F0E8F2191FB6332A00D9E147 /* Stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Stack.c; sourceTree = "<group>"; };
 		F0EC5BA31FB350DC002D411A /* Lab6 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lab6; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0EC5BA61FB350DC002D411A /* part1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = part1.c; sourceTree = "<group>"; };
 		F0EC5BAD1FB35115002D411A /* Train.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Train.c; sourceTree = "<group>"; };
@@ -68,8 +72,11 @@
 				F0EC5BAD1FB35115002D411A /* Train.c */,
 				F0EC5BAE1FB35115002D411A /* Train.h */,
 				F0EC5BB11FB35C9E002D411A /* part2.c */,
-				F0EC5BB31FB35CC5002D411A /* List.c */,
+				F0E8F2161FB6327C00D9E147 /* part3.c */,
 				F0EC5BB41FB35CC5002D411A /* List.h */,
+				F0EC5BB31FB35CC5002D411A /* List.c */,
+				F0E8F2181FB6332A00D9E147 /* Stack.h */,
+				F0E8F2191FB6332A00D9E147 /* Stack.c */,
 			);
 			path = Lab6;
 			sourceTree = "<group>";
@@ -133,8 +140,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0EC5BAF1FB35115002D411A /* Train.c in Sources */,
-				F0EC5BB51FB35CC5002D411A /* List.c in Sources */,
-				F0EC5BB21FB35C9E002D411A /* part2.c in Sources */,
+				F0E8F21A1FB6332A00D9E147 /* Stack.c in Sources */,
+				F0E8F21F1FB649DA00D9E147 /* part3.c in Sources */,
+				F0E8F21D1FB6493D00D9E147 /* List.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +271,7 @@
 				F0EC5BAC1FB350DC002D411A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,6 +14,7 @@
 
 typedef struct Node{
     int number;
+    struct Node *last;
     struct Node *next;
 } Node;
 
@@ -25,8 +26,14 @@ typedef struct {
 Node *createNode(int num);
 List *createList();
 Node * front(List * list);
+int nodesCount(List *list);
+Node * last(List *list);
 Node * insert(List * list, int index, int value);
 int removeAtIndex(List * list, int index);
 
+void printList(List *list);
+
+int searchForward(List *list, int value);
+int searchBackward(List *list, int value);
 
 #endif /* List_h */
