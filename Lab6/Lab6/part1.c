@@ -13,14 +13,21 @@ int main(int argc, const char * argv[]) {
 
     printf("input number of cars and weight of each car:\n");
     int number;
-    int weight;
-    scanf("%d %d",&number,&weight);
+    scanf("%d",&number);
+    printf("input weights of each car, seperate by blank:\n");
+    
+    int weight[number];
+    for (int i=0; i<number; i++) {
+        int wei;
+        scanf("%d",&wei);
+        weight[i] = wei;
+    }
     
     Train *train = malloc(sizeof(Train));
     printf("Malloc Train:%p\n",train);
     Car *current = NULL;
     for (int i=0; i<number; i++) {
-        Car *car = initCar(weight);
+        Car *car = initCar(weight[i]);
         if (i==0) {
             train->first = car;
             current = car;
