@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F05F8C661FCCF6D500322EEC /* part1.c in Sources */ = {isa = PBXBuildFile; fileRef = F0EC5BA61FB350DC002D411A /* part1.c */; };
+		F05F8C671FCDE6CB00322EEC /* part2.c in Sources */ = {isa = PBXBuildFile; fileRef = F0EC5BB11FB35C9E002D411A /* part2.c */; };
 		F0E8F21A1FB6332A00D9E147 /* Stack.c in Sources */ = {isa = PBXBuildFile; fileRef = F0E8F2191FB6332A00D9E147 /* Stack.c */; };
 		F0E8F21D1FB6493D00D9E147 /* List.c in Sources */ = {isa = PBXBuildFile; fileRef = F0EC5BB31FB35CC5002D411A /* List.c */; };
 		F0EC5BAF1FB35115002D411A /* Train.c in Sources */ = {isa = PBXBuildFile; fileRef = F0EC5BAD1FB35115002D411A /* Train.c */; };
@@ -139,8 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F05F8C661FCCF6D500322EEC /* part1.c in Sources */,
 				F0EC5BAF1FB35115002D411A /* Train.c in Sources */,
+				F05F8C671FCDE6CB00322EEC /* part2.c in Sources */,
 				F0E8F21A1FB6332A00D9E147 /* Stack.c in Sources */,
 				F0E8F21D1FB6493D00D9E147 /* List.c in Sources */,
 			);

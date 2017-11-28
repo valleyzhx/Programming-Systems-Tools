@@ -31,7 +31,7 @@ int main(int argc, const char * argv[]) {
     if (find == 0) {
         printf("The value %d was not found\n",value);
     }
-    for (int i=9; i>=0; i++) {
+    for (int i=9; i>=0; i--) {
         removeAtIndex(list, i);
     }
     free(list);
