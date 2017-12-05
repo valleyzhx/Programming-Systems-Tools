@@ -28,6 +28,7 @@
 		F0DD17B91FBF2FBA000969E9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F0DD17C01FBF300F000969E9 /* BST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BST.h; sourceTree = "<group>"; };
 		F0DD17C11FBF300F000969E9 /* BST.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BST.c; sourceTree = "<group>"; };
+		F0EBB8851FD5C03700097416 /* data.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 				F0DD17B91FBF2FBA000969E9 /* main.c */,
 				F0DD17C01FBF300F000969E9 /* BST.h */,
 				F0DD17C11FBF300F000969E9 /* BST.c */,
+				F0EBB8851FD5C03700097416 /* data.txt */,
 			);
 			path = Lab7;
 			sourceTree = "<group>";
@@ -255,6 +257,7 @@
 				F0DD17BF1FBF2FBA000969E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

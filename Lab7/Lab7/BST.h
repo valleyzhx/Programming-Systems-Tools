@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 typedef struct{
     int value;
@@ -33,6 +34,9 @@ Data *createData(int value);
 Node *createNode(Data *data);
 
 Tree *createTree();
+
+void deleteTree(Tree *tree);
+void deleteNode(Node *node);
 
 //Node *addLeaf(Node *node, Data *data);
 

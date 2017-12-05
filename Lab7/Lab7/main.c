@@ -11,24 +11,38 @@
 
 int main(int argc, const char * argv[]) {
     
-    
     Tree *tree = createTree();
     
-    int array[9] = {5, 7, 3, 8, 2, 6, 4, 9, 1};
-    for (int i=0; i<9; i++) {
-        Data *data = createData(array[i]);
+    FILE *fptr = fopen("data.txt", "a+");
+    fseek(fptr,0,SEEK_SET);
+    int num;
+    int i=0;
+    while(fscanf(fptr, "%d", &num)>=0) {
+        Data *data = createData(num);
         if (i==0) {
-           tree->root = createNode(data);
+            tree->root = createNode(data);
         }else{
             insertNode(tree->root, data);
         }
+        i++;
     }
-    //printTree(tree);
-    
-    
-    Data *read = createData(2);
+    printf("Tree is:\n");
+    printTree(tree);
+    printf("\ninput a number to find:");
+    int find;
+    scanf("%d",&find);
+    Data *read = createData(find);
     searchTree(tree, read);
     
+    deleteTree(tree);
+    
+    printf("tree -- %p\n",tree);
+    
+    free(read);
+    read = NULL;
+    
+    fclose(fptr);
+    fptr = NULL;
     
     return 0;
 }
