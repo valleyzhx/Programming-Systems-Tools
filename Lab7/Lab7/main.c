@@ -36,7 +36,6 @@ int main(int argc, const char * argv[]) {
     
     deleteTree(tree);
     
-    printf("tree -- %p\n",tree);
     
     free(read);
     read = NULL;
