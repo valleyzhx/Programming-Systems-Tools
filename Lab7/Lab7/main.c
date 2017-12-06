@@ -32,7 +32,19 @@ int main(int argc, const char * argv[]) {
     int find;
     scanf("%d",&find);
     Data *read = createData(find);
-    searchTree(tree, read);
+    Node *search = searchTree(tree, read);
+    printf("\n");
+    if (search->parent) {
+        printf("parentNode:%d ",search->parent->data->value);
+    }
+    if (search->left) {
+        printf("leftNode:%d ",search->left->data->value);
+    } if (search->right) {
+        printf("rightNode:%d ",search->right->data->value);
+    }
+    printf("\n");
+    printf("\n");
+
     
     deleteTree(tree);
     
